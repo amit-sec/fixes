@@ -1,0 +1,26 @@
+#Open the Terminal and Run the following commands one by one
+
+#Disable the systemd-resolved service.
+
+sudo systemctl disable systemd-resolved.service
+#Stop the Service
+
+sudo systemctl stop systemd-resolved.service
+#Remove the Configuration file manually
+
+sudo rm /etc/resolv.conf
+#Now, Create the file again.
+
+sudo nano /etc/resolv.conf
+#Enter the Below Lines
+
+nameserver 8.8.8.8
+#Press CTRL+O to save the File, Then CTRL+X to Close it
+
+#Enable the Service
+
+sudo systemctl enable systemd-resolved.service
+#Start the Service back.
+
+sudo systemctl start systemd-resolved.service
+#That’s it

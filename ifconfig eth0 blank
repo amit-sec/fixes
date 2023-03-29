@@ -1,0 +1,11 @@
+ifconfig shows no eth0 in interface 
+fix 
+
+edit file in /etc/network/interfaces
+
+nano /etc/network/interfaces
+
+add below 2 lines 
+
+auto eth0
+iface eth0 inet dhcp
